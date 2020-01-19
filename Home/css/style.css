@@ -42,7 +42,7 @@ body>hr{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	background-image: url(../img/img_bg.jpg);
 	background-size: cover;
 	filter: brightness(50%);
@@ -73,9 +73,9 @@ body>hr{
 }
 .points span{
 	display: inline-block;
-	width: 40px;
-	height: 20px;
-	background-color: #ddd;
+	width: 60px;
+	height: 30px;
+	background-color: rgb(221, 221, 221);
 	border-radius: 50%;
 	position: absolute;
 }
@@ -209,6 +209,7 @@ body>hr{
 	width: 50%;
 	padding-right: 50px;
 	text-align: left;
+	padding: 300px 50px 300px 0px;
 }
 .unbox .contents h1{
 	font-family: 'Do Hyeon', sans-serif;

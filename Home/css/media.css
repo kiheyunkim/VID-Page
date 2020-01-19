@@ -1,0 +1,78 @@
+@media screen and (max-width: 768px){
+	#page:nth-of-type(1){
+		height: 400px;
+	}
+	.unbox .imgs{
+		float: none;
+		display: block;
+		width: 100%;
+		height: 70%;
+		position: relative;
+	}
+	.unbox .contents{
+		float: none;
+		display: block;
+		width: 100%;
+		height: 30%;
+		padding: 0;
+	}
+	.unbox .side, .unbox .bottom, .unbox .inner{
+	  right: calc(25%);
+	  width: 50% !important;
+	}
+	.unbox .inner{
+		padding: 50px;
+	}
+	#page:nth-of-type(4){
+	  height: 1300px;
+	}
+	.graph > div{
+		margin-top: 40px; 
+	}
+	.graph .circle{
+		display: block;
+		width: 100%;
+	}
+	.graph .contents{
+		width: 100%;
+		display: block;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#page:nth-of-type(1){
+		height: 240px;
+	}
+	#page{
+		height: 480px;
+	}
+	#page > div{
+		padding: 50px;
+	}
+	.route1 .points .point2{
+	 left: calc(25% - 20px);
+	}
+	.route1 .points .point3{
+	 left: calc(50% - 20px);
+	}
+	.route1 .points .point4{	
+	 left: calc(75% - 20px);
+	}
+	.route2 .points .point2{
+	left: calc(50% - 20px);
+	}
+	#page:nth-of-type(3){
+		height: 640px;
+	}
+	.unbox .imgs{
+		height: 60%;
+	}
+	.unbox .inner{
+		padding: 30px;
+	}
+	#page:nth-of-type(4){
+	  height: 1400px;
+	}
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/signupform.css">
+    <link rel="stylesheet" href="css/loginform.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Montserrat:700|Noto+Sans+KR&display=swap" rel="stylesheet"> 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js'></script>
+    <script src='./js/routing.js'></script>
+  </head>
+
+<body>
+  <!-- 상단 영역------------------------------------------------------------------------------------------------------------------- -->
+  <header>
+    <div id='signinform'>
+      <div id="id02" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+         </div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit">Login</button>
+          <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!--  가입! -->
+    <div id='signupform'>
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+         <form class="modal-content animate" action="/action_page.php">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+    
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+      
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          
+            <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</label>
+      
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <!--  네비 구역 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">VID란?</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">무엇이 다른가요?</a>
+              <a class="dropdown-item" href="#">어떻게 돌아가나요?</a>
+              <a class="dropdown-item" href="#">얼마나 좋아지나요?</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> 질문하기</a>
+            <div class="dropdown-menu"> 
+              <a class="dropdown-item" href="#">Q&ampA</a>
+              <a class="dropdown-item" href="#">FAQ</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">고객센터</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">찾아오시는길</a>
+              <a class="dropdown-item" href="#">제작자</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#">VID</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="document.getElementById('id02').style.display='block'">SIGNUP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="document.getElementById('id01').style.display='block'">SIGNUP</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- 타이틀 영역------------------------------------------------------------------------------------------------------------------- -->
+  <div id="page">
+    <div class="title">
+      <h1>VID</h1>
+    </div>
+  </div>
+  <!-- 컨텐츠 영역------------------------------------------------------------------------------------------------------------------- -->
+  <!-- 첫 번째 페이지 -->
+  <div id="page">
+    <div class="race">
+      <bold><h1>간소화 했습니다!</h1></bold>
+      <div class="route1">
+        <div class="points">
+          <span class="point1">1</span>
+          <span class="point2">2</span>
+          <span class="point3">3</span>
+          <span class="point4">4</span>
+          <span class="point5">5</span>
+          <img class="piece" src="img/icn_pin.png" alt="">
+        </div>
+        <div class="road">
+          <path></path>
+        </div>
+      </div>
+      <div class="route2">
+        <div class="points">
+          <span class="point1">1</span>
+          <span class="point2">2</span>
+          <span class="point3">3</span>
+          <img class="piece" src="img/icn_pin.png" alt="">
+        </div>
+        <div class="road">
+          <path></path>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- 두 번째 페이지 -->
+  <div id="page">
+    <div class="unbox">
+      <div class="imgs">
+        <img class="side" src="img/img_box_side.svg" alt="">
+        <img class="bottom" src="img/img_box_bottom.svg" alt="">
+        <img class="inner" src="img/img_blockchain.png" alt="">
+      </div><!-- 
+     --><div class="contents">
+        <h1>안전합니다!</h1>
+          <h5>V.I.D 서비스는 블록체인 기술을 이용하여 안전한 거래체계를 만들었습니다. 4차 산업시대에 더 안전한 인터넷 거래를 만들어 나갑니다.</h5>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- 세 번째 페이지 -->
+  <div id="page">
+    <div class="graph">
+      <h1> V.I.D를 사용하면 이렇게 좋아질 수 있습니다!</h1>
+      <div class="group1">
+        <!-- value = 게이지 퍼센트, size = 그래프 크기, thickness = 게이지 두께 -->
+        <div class="circle round1" data-value="0.42" data-size="150" data-thickness="6">
+          <strong></strong>
+        </div><!-- 
+       --><div class="contents">
+          <h2>단축되는 거래기간</h2>
+          <p>기존 서비스들에 비해서 약 42%정도 빨라집니다. 블록체인 기술을 이용한 V.I.D만의 물품 관리체계를 통해 더 빠르게 구매하실 수 있습니다.</p>
+        </div>
+      </div>
+      <div class="group2">
+        <div class="circle round2" data-value="0.73" data-size="150" data-thickness="6">
+          <strong></strong>
+        </div><!-- 
+      --><div class="contents">
+          <h2>더 저렴한 이용료</h2>
+          <p>거래과정의 간소화를 통해서 거품을 뺐습니다. 이를 통해 기존 서비스 이용 시 보다 최대 73%까지 가격을 줄였습니다!</p>
+        </div>
+      </div>
+      <div class="group3">
+        <div class="circle round3" data-value="0.90" data-size="150" data-thickness="6">
+          <strong></strong>
+        </div><!-- 
+      --><div class="contents">
+          <h2>만족도 상승</h2>
+          <p>V.I.D의 서비스를 이용하면서 기존 서비스보다 평균적으로 90% 더 나은 평점을 주셨습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 하단 영역------------------------------------------------------------------------------------------------------------------- -->
+  <footer>
+    <div class="copyright">
+      <p>Cpoyright 2020. kiheyunkim all rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

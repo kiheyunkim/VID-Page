@@ -1,0 +1,288 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* 컨텐츠 영역---------------------------------------------------------------------------------------------------------------------- */
+#page{
+	font-family: 'Noto Sans KR', sans-serif;
+	max-width: 1920px;
+	text-align: center;
+	width: 100%;
+	height: 800px;
+	/*! max-height: 1440px; */
+}
+#page>div{
+	max-width: 1280px;
+	margin: 0 auto;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 100px;
+	position: relative;
+}
+body>hr{
+	margin: 0 !important;
+}
+
+/* 타이틀---------------------------------------------- */
+.title{
+	max-width: 1920px !important;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 1rem;
+}
+.title::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80%;
+	background-image: url(../img/img_bg.jpg);
+	background-size: cover;
+	filter: brightness(50%);
+	z-index: -1;
+}
+.title h1{
+	font-size: 100px;
+	color: #fff;
+	line-height: 4.4;
+	margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* 첫 번째 페이지---------------------------------------------- */
+/* 공통 영역 */
+.race{
+	
+}
+.race>div{
+	height: 50%;
+}
+.points{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	float: right;
+}
+.points span{
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background-color: #ddd;
+	border-radius: 50%;
+	position: absolute;
+}
+.points img{
+	display: inline-block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+}
+.road{
+	width: 100%;
+	height: 100%;
+}
+/* 길찾기(상) */
+/* 이동 객체 */
+.route1 .points .piece{
+	top: 0;
+	left: 0;
+}
+/* 이동 지점(포인트) */
+.route1 .points .point1{
+	top: 50%;
+	left: 0%;
+}
+.route1 .points .point2{
+	top: 25%;
+	left: calc(25% - 40px);
+}
+.route1 .points .point3{
+	top: 50%;
+	left: calc(50% - 40px);
+}
+.route1 .points .point4{
+	top: 25%;
+	left: calc(75% - 40px);
+}
+.route1 .points .point5{
+	top: 50%;
+	left: calc(100% - 40px);
+}
+/* 이동 경로 */
+.route1 .road path{
+	
+}
+/* 길찾기(하) */
+/* 이동 객체 */
+.route2 .points .piece{
+	top: 0;
+	left: 0;
+}
+/* 이동 지점(포인트) */
+.route2 .points .point1{
+	top: 50%;
+	left: 0%;
+}
+.route2 .points .point2{
+	top: 25%;
+	left: calc(50% - 40px);
+}
+.route2 .points .point3{
+	top: 50%;
+	left: calc(100% - 40px);
+}
+/* 이동 경로 */
+.route2 .road path{
+	
+}
+
+/* 두 번째 페이지---------------------------------------------- */
+.unbox{
+	overflow: hidden;
+}
+.unbox .imgs{
+	float: right;
+	width: 50%;
+}
+.unbox .imgs img{
+	width: 40%;
+	position: absolute;
+}
+
+/* 상자 옆면 */
+.unbox .side{
+	height: 100%;
+	bottom: 0px;
+	right: 100px;
+  	animation: '0';/*boxSide 2.5s cubic-bezier(.77,0,.18,1) both;*/
+	opacity: 1;
+}
+@keyframes boxSide{
+	0%{ bottom: 0px; }
+	20%{ bottom: 0px; }
+	80%{ bottom: 500px; opacity: 1; }
+	100%{ bottom: 500px; opacity: 0; }
+}
+/* 상자 바닥 */
+.unbox .bottom{
+	bottom: 100px;
+	z-index: -1;
+	right: 100px;
+	animation: '0';/*bottomFade 2s both;*/
+}
+
+@keyframes bottomFade{
+	0%{opacity: 1; scale: 1;}
+	100%{opacity: 0; scale: 1;}
+}
+
+/* 상자 안 */
+.unbox .inner{
+	bottom: 100px;
+	right: 100px;
+	z-index: -1;
+	background-color: rgba(255,255,255,0.6);
+	opacity: 1;
+	/*animation: backgroundFade 2s both;*/
+	padding: 100px;
+	transform: scale(0.5);
+	border-radius: 50%;
+	box-shadow: 0 50px 50px rgba(24, 68, 130, 0.2);
+}
+
+@keyframes backgroundFade{
+	0%{transform: scale(0.5); -webkit-transform: scale(0.5);}
+	100%{transform: scale(1.0); -webkit-transform: scale(1.0);}
+ }
+
+/* 설명 */
+.unbox .contents{
+	float: left;
+	width: 50%;
+	padding-right: 50px;
+	text-align: left;
+}
+.unbox .contents h1{
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+
+/* 세 번째 페이지---------------------------------------------- */
+#page:nth-of-type(4){
+	height: 1000px;
+}
+
+.graph{
+	
+}
+
+.graph h1{
+	margin: 0 auto;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Do Hyeon', sans-serif;
+}
+.graph>div{
+	display: inline-block;
+	margin-top: 50px;
+	width: 100%;
+}
+.graph .circle{
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 150px;
+}
+.graph .circle canvas{
+	filter: hue-rotate(90deg);
+}
+.graph .circle strong{
+	display: block;
+	font-size: 30px;
+	color: #b1b1b1;
+	position: relative;
+	top: -105px;
+	left: 0px;
+}
+/* 설명 */
+.graph .contents{
+	width: 50%;
+	display: inline-block;
+	text-align: left;
+	padding: 0 20px;
+	vertical-align: top;
+}
+.graph .contents h2{
+	font-family: 'Do Hyeon', sans-serif;
+}
+.graph p{
+	
+	font-size: 0.9em;
+}
+/* 하단 영역---------------------------------------------------------------------------------------------------------------------- */
+
+footer{
+	max-width: 1920px;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+	background-color: #ddd;
+}
+footer .copyright{
+	max-width: 1280px;
+	padding: 18px;
+	font-size: 0.7em;
+	margin: 0 auto;
+}
+footer .copyright p{
+	margin: 0 auto;
+}
